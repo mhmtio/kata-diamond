@@ -11,6 +11,6 @@ class DiamondBuilder() {
                      buf2 = " " * i
     } yield s"$buf1${(A+i).toChar}$buf2"
     val topHalf = topLeftHalf.map(l => l + l.reverse.tail)
-    (topHalf ++ topHalf.take(diff).reverse).mkString("", "\n", "\n")
+    (topHalf ++ topHalf.init.reverse).mkString("", "\n", "\n")
   }
 }
